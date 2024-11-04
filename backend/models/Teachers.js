@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
-    firstName: {
-        type: String,
-        required: true
-    },
-    lastName: {
+const TeacherSchema = new Schema({
+    name: {
         type: String,
         required: true
     },
@@ -15,11 +11,16 @@ const UserSchema = new Schema({
         required: true,
         unique: true
     },
-    password: {
+    course: {
         type: String,
+        required: true
+    },
+    charges: {
+        type: Number,
         required: true
     }
 });
 
-const UserModel = mongoose.model('UserData', UserSchema);
-module.exports = UserModel;
+const TeacherModel = mongoose.model('Teacher', TeacherSchema);
+
+module.exports = TeacherModel;
