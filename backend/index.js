@@ -5,6 +5,9 @@ require('dotenv').config();
 require('./models/db')
 const bodyParser = require('body-parser');
 const AuthRouter = require('./Routes/AuthRouter');
+const StudentRouter = require('./Routes/StudentRouter');
+const CourseRouter = require('./Routes/CourseRouter');
+const TeacherRouter = require('./Routes/TeacherRouter');
 // const User = require('./models/User.tsx');
 
 const app = express();
@@ -14,7 +17,10 @@ const PORT = process.env.PORT || 5005;
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
-app.use('/auth',AuthRouter)
+app.use('/auth',AuthRouter);
+app.use('/student',StudentRouter);
+app.use('/course',CourseRouter);
+app.use('/teacher',TeacherRouter);
 
 // Connect to MongoDB
 // mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
