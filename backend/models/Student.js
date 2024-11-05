@@ -23,6 +23,11 @@ const StudentSchema = new Schema({
             message: 'You can only choose up to 3 courses.'
         },
         required: true
+    },
+    status:{
+        type: String,
+        required: true,
+        enum: ['Active', 'inactive']
     }
 });
 

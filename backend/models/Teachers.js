@@ -21,6 +21,6 @@ const TeacherSchema = new Schema({
     }
 });
 
-const TeacherModel = mongoose.model('Teacher', TeacherSchema);
+const TeacherModel = mongoose.model('TeacherData', TeacherSchema);
 
 module.exports = TeacherModel;

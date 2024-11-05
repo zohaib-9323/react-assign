@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const CourseSchema = new Schema({
-    courseName: {
+    name: {  // Change to name instead of courseName
         type: String,
         required: true
     },
@@ -15,7 +15,7 @@ const CourseSchema = new Schema({
         required: true
     }
 });
-s
+
 const CourseModel = mongoose.model('CourseData', CourseSchema);
 
 module.exports = CourseModel;
